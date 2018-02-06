@@ -52,7 +52,6 @@ form label{
   border-radius: 3px;
   border: 0;
   display: inline-block;
-  float: left;
   margin: 15px 0;
   padding: 0.2em 1em;
   font-size: 1em;
@@ -110,17 +109,23 @@ input::placeholder{
   transform: scale(0.95);
 }
 
-.btn-toggle-complete{
-  border: 0;
-  padding: 0;
-  margin: 0;
+.control-buttons{
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+.btn-secondary{
+  display: inline-block;
+  position: relative;
+  border: 0;
+  padding: 0;
+  margin: 0 10px;
 }
 
-.btn-toggle-complete:after{
+.btn-secondary:after{
   position: absolute;
   content: '';
   width: 0;
@@ -131,7 +136,7 @@ input::placeholder{
   transition: all ease-in 0.25s;
 }
 
-.btn-toggle-complete:hover:after{
+.btn-secondary:hover:after{
   width: 100%;
 }
 
