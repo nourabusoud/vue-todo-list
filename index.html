@@ -11,9 +11,8 @@
 <body>
   <div id="app">
     <section class="todo-wrapper">
-
+      <h1 class="todo-title">{{ today.day }}<br>{{ today.date }}</h1>
       <form @keydown.enter.prevent="">
-        <label>{{ new Date().getFullYear() }}</label>
         <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="Take the garbage out" v-model="new_todo" v-on:keyup.enter="addItem">
         <div class="btn btn-add" v-bind:class="{ active: new_todo }"  @click="addItem">+</div>
       </form>
@@ -90,6 +89,28 @@ new Vue({
     },
     completedPercentage: function() {
       return (Math.floor((this.completed.length / this.todoList.length) * 100)) + "%";
+    },
+    today: function() {
+      var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+      var yyyy = today.getFullYear();
+
+      if(dd<10) {
+          dd = '0'+dd
+      } 
+
+      if(mm<10) {
+          mm = '0'+mm
+      } 
+
+      today = {
+        day: weekday[today.getDay()],
+        date:  mm + '-' + dd + '-' + yyyy,
+      }
+
+      return(today);
     }
   },
   methods: {
