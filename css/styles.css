@@ -3,21 +3,24 @@
 }
 
 body{
-  background-color: #fefefe;
-  background-image: linear-gradient(#fc6c48 0%, #ef5081 100%);
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   color: #444;
+  background-color: #fefefe;
+  background-image: linear-gradient(#fc6c48 0%, #ef5081 100%);
   background-repeat: no-repeat;
-  min-height: 100vh;
   background-size: cover;
+  padding: 50px 20px;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
 }
 
 .todo-wrapper{
   width: 400px;
   max-width: 100%;
   min-height: 500px;
-  margin: 50px auto;
+  margin: auto;
   border: 1px solid #eee;
   border-radius: 4px;
   padding: 40px 20px;
@@ -29,10 +32,11 @@ body{
 }
 
 .todo-title{
-  font-size: 1.1em;
-  text-align: center;
-  color: #777;
+  font-size: 1.2em;
+  color: #f65c65;
+  font-weight: normal;
 }
+
 form{
   overflow: overlay;
 }
@@ -271,4 +275,19 @@ ul.todo-list li:hover .delete:after{
 .slide-fade-enter, .slide-fade-leave-to {  
   transform: scale(1.1);
   opacity: 0;
+}
+
+
+/* Footer */
+footer{  
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  bottom: 20px;
+  left: 0;
+}
+
+footer a{
+  color: #fff;
 }
