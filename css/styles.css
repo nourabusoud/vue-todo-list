@@ -294,7 +294,7 @@ footer a{
   color: #fff;
 }
 
-@media only screen and (max-width : 786px){
+@media only screen and (min-width : 786px){
   footer{ 
     position: absolute;
     bottom: 20px;
