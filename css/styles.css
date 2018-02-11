@@ -16,6 +16,11 @@ body{
   position: relative;
 }
 
+h1{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
 .todo-wrapper{
   width: 400px;
   max-width: 100%;
