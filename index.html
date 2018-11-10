@@ -31,7 +31,7 @@
       </form>
 
       <div v-if="pending.length > 0">
-        <p class="status busy">You have {{ pending.length }} pending item<span v-if="todoList.length>1">s</span></p>
+        <p class="status busy">You have {{ pending.length }} pending item<span v-if="pending.length>1">s</span></p>
         <transition-group name="todo-item" tag="ul" class="todo-list">
           <li v-for="(item, index) in pending" v-bind:key="item.title">
             <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
